@@ -1,0 +1,16 @@
+version: "2"
+services:
+  keepalived:
+    image: isaac-keepalived
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: keepalived
+    network_mode: host
+    environment:
+      VIRTUAL_IP: 128.232.21.250
+      INTERFACE: net0
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./keepalived.conf:/etc/keepalived/keepalived.conf:ro   
