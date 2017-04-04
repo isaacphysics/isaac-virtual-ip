@@ -15,6 +15,6 @@ vrrp_instance VI_1 {
         auth_pass d0cker
     }
     virtual_ipaddress {
-        128.232.21.250/24
+        128.232.21.250/22
     }
 }
